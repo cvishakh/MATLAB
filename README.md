@@ -94,8 +94,9 @@ The external degree of freedom \( f_a \) is defined as:
   - Example file name: `results_truss1.mat`
 
 ---
+### Contributing
+If you would like to contribute to this project, feel free to fork the repository and submit a pull request. Suggestions and improvements are welcome!
 
-## Notes
-- Ensure all steps are implemented efficiently and clearly.
-- Test the script thoroughly to verify the correctness of calculations an
+### Contact
+For any questions or issues, please contact vishakh.cheruparambath@fau.de
 
