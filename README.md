@@ -1,30 +1,101 @@
-# MATLAB
-Intro to Matlab with Static Truss Experiment:
-The aim of this experiment is to prepare a Matlab script for the visualisation of a 2D truss and the determination of the reaction and bar forces occurring in it. It is assumed that the truss is an ideal truss, which means that the bars in it can only transmit tensile or compressive forces.
+# MATLAB: Intro to MATLAB with Static Truss Experiment
 
-A plane truss can be perceived as a system of k initially free-moving nodes that are connected to each other by s bars. With the addition of support connections by which the truss is borne, the remaining degree of freedom f of the bounded system follows as f = 2k − (a + s)
-and the external degree of freedom fa: fa = 3 − a.
+## Objective
+The aim of this experiment is to prepare a MATLAB script for the visualization of a 2D truss and the determination of the reaction and bar forces occurring within it. The truss is assumed to be an ideal truss, meaning the bars only transmit tensile or compressive forces.
 
-%Task 1:
-Cut the plane truss shown here free and set up the two equilibrium conditions for every node in the truss.
+## Overview of a Plane Truss
+A plane truss can be perceived as a system of \( k \) initially free-moving nodes connected by \( s \) bars. By adding support connections to bear the truss, the remaining degree of freedom \( f \) of the bounded system is given by:
 
-%Task 2:
-Load the variables of one of the given mat files into the workspace and extract the coordinates of the nodes, the connectivity matrix, the bearings as well and the external forces as separate variables. To enable an interactive selection of the input file, a matlab dialogue box can be utilised by exploiting the Matlab function uigetfile.
+\[ f = 2k - (a + s) \]
 
-%Task 3:
-Visualise the given truss with its bars (and numbers), nodes, bearings and forces. The labelling of the axes and the legend should also be given. An exemplary representation is given below.
+where:  
+- \( k \): number of nodes  
+- \( s \): number of bars  
+- \( a \): number of support reactions  
 
-%Task 4: 
-Check whether the necessary condition f = 0 of static determinateness is fulfilled and write out an appropriate and informative message in the Command Window. If necessary, terminate the script with an error message.
+The external degree of freedom \( f_a \) is defined as:
 
-%Task 5:
-Calculate the angle α that every bar encloses with the x-axis. Use either the Matlab function atan or atan2 for your implementation. Consider here the difference between these two functions and the alignment of the bar in the Cartesian coordinate system. Additionally, note that the direction of the bar force at its two nodes is not identical.
+\[ f_a = 3 - a \]
 
-%Task 6:
-Formulate the linear system of equations in matrix form by using the given input variables and already generated variables from the previous tasks. Note the dimensions of the bounded system (see task 1). Then solve this linear system of equations for the unknown vector r.
+---
 
-%Task 7:
-Visualise the solution of the calculation by colouring the bars according to their load condition, i.e. zero, tension or compression bar. An exemplary representation is shown here.
+## Task Descriptions
 
-%Task 8:
-Save the results of the calculation (support and bar forces) as well as the input parameters in a new mat file, e.g. labelled results_truss1.mat.
+### Task 1: Equilibrium Conditions
+- **Objective**: Analyze the plane truss shown and establish the equilibrium conditions for each node.
+- **Requirement**: Cut the truss free and set up the two equilibrium equations for every node.
+
+---
+
+### Task 2: Load Variables from a `.mat` File
+- **Objective**: Load and extract data from a given `.mat` file.
+- **Steps**:
+  1. Use `uigetfile` for an interactive file selection dialogue.
+  2. Load the file into the workspace.
+  3. Extract and separate the following variables:
+     - Coordinates of the nodes
+     - Connectivity matrix
+     - Bearing information
+     - External forces
+
+---
+
+### Task 3: Truss Visualization
+- **Objective**: Visualize the truss structure.
+- **Requirements**:
+  - Plot the truss with bars, nodes, bearings, and external forces.
+  - Include labels for the axes and a legend.
+- **Output**: An exemplary truss representation is provided as a reference.
+
+---
+
+### Task 4: Static Determinacy Check
+- **Objective**: Verify the static determinacy of the truss.
+- **Steps**:
+  1. Check if \( f = 0 \) (a condition for static determinacy).
+  2. Display a meaningful message in the Command Window.
+  3. If the condition is not met, terminate the script with an error.
+
+---
+
+### Task 5: Angle Calculation
+- **Objective**: Calculate the angle \( \alpha \) between each bar and the x-axis.
+- **Implementation**:
+  - Use `atan` or `atan2` for the angle calculation.
+  - Consider differences between these functions and bar alignment in Cartesian coordinates.
+  - Note that bar force directions differ at the two connected nodes.
+
+---
+
+### Task 6: Formulate and Solve Equations
+- **Objective**: Formulate and solve the system of equations.
+- **Requirements**:
+  - Use input and generated variables to construct the system in matrix form.
+  - Solve for the unknown reaction vector \( r \).
+  - Reference dimensions based on the initial equilibrium analysis from Task 1.
+
+---
+
+### Task 7: Visualize Results
+- **Objective**: Visualize the results.
+- **Steps**:
+  1. Color-code the bars based on their load conditions:
+     - Zero force
+     - Tension force
+     - Compression force
+  2. Refer to the exemplary representation for guidance.
+
+---
+
+### Task 8: Save Results
+- **Objective**: Save the calculated results.
+- **Steps**:
+  - Store support and bar forces, along with input parameters, in a new `.mat` file.
+  - Example file name: `results_truss1.mat`
+
+---
+
+## Notes
+- Ensure all steps are implemented efficiently and clearly.
+- Test the script thoroughly to verify the correctness of calculations an
+
